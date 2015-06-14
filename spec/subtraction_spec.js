@@ -28,4 +28,10 @@ describe('Subtraction function', function(){
 
 		expect(error_message).toBe('');
 	});
+
+	it('should subtract two numbers together', function(){
+		var result = subtraction(5,3);
+
+		expect(result).toBe(2);
+	});
 });
