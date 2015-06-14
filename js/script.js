@@ -20,18 +20,18 @@ $(function () {
 				if($('#screen').html().length > 9){
 					calc_state.left_val= calc_state.left_val.div(10);
 				}else{
-					calc_state.left_val = calc_state.left_val.plus(Number(button_val.toPrecision(2)));
+					calc_state.left_val = calc_state.left_val.plus(Number(button_val.toPrecision(10)));
 			}
 			}else if($('#screen').html().length < 10){
 				button_val = button_val.div(calc_state.decimal_place);
 				calc_state.decimal_place *= 10;
-				calc_state.left_val = calc_state.left_val.plus(Number(button_val.toPrecision(2)));
+				calc_state.left_val = calc_state.left_val.plus(Number(button_val.toPrecision(10)));
 			}
 		}else if(button_val === 'clear'){
 			calc_state.clear();
 		}else if(button_val === '.'){
 			calc_state.decimal = true;
 		}
-		$('#screen').html(Number(calc_state.left_val.toPrecision(2)));
+		$('#screen').html(Number(calc_state.left_val.toPrecision(10)));
 	});
 });
