@@ -3,32 +3,44 @@ var CalcState = function(){
 		this.right_val = new Big(0);
 		this.left_val = new Big(0);
 		this.operator = '';
+		this.reset_decimal();
+	};
+	this.reset_decimal = function(){
 		this.decimal = false;
 		this.decimal_place = 10;
 	};
+
 	this.clear();
 };
+
 function calculate(calc_state){
+	var result = 0;
+	var left_val = Number(calc_state.left_val.toPrecision(10));
+	var right_val = Number(calc_state.right_val.toPrecision(10));
 	switch(calc_state.operator){
 		case '+':
-			result = addition(calc_state.left_val, calc_state.right_val);
+			result = addition(left_val, right_val);
 			break;
 		case '-':
-			result = subtraction(calc_state.left_val, calc_state.right_val);
+			result = subtraction(left_val, right_val);
 			break;
 		case '×':
-			result = multiplication(calc_state.left_val, calc_state.right_val);
+			result = multiplication(left_val, right_val);
 			break;
 		case '÷':
-			result = division(calc_state.left_val, calc_state.right_val);
+			result = division(left_val, right_val);
 			break;
 	}
 	calc_state.clear();
+	calc_state.left_val = new Big(result);
 }
+
 $(function () {
 	var calc_state = new CalcState();
+
 	$('button').click(function(ev){
 		ev.preventDefault();
+
 		var button_val = $(ev.target).html();
 		var side = (calc_state.operator === '')? 'left_val' : 'right_val';
 
@@ -53,8 +65,13 @@ $(function () {
 		}else{
 			if(calc_state.operator !== ''){
 				calculate(calc_state);
+				side = 'left_val';
+				if(button_val !== '=') {
+					calc_state.operator = button_val;
+				}
 			}else if(button_val !== '='){
 				calc_state.operator = button_val;
+				calc_state.reset_decimal();
 			}
 		}
 		$('#screen').html(Number(calc_state[side].toPrecision(10)));
