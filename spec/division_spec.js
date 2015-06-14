@@ -28,6 +28,13 @@ describe('Division function', function(){
 
 		expect(error_message).toBe('');
 	});
+
+	it('should divide two numbers together', function(){
+		var result = division(4,2);
+
+		expect(result).toBe(2);
+	});
+
 	it('should throw an error when dividing by 0', function(){
 		var error_message = '';
 		try{

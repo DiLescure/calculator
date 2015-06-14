@@ -37,5 +37,6 @@ function division(a, b) {
 	if(b === 0){
 		throw new Error('Not even God can divide by 0!');
 	}
+	return a / b;
 
 }
