@@ -8,6 +8,23 @@ var CalcState = function(){
 	};
 	this.clear();
 };
+function calculate(calc_state){
+	switch(calc_state.operator){
+		case '+':
+			result = addition(calc_state.left_val, calc_state.right_val);
+			break;
+		case '-':
+			result = subtraction(calc_state.left_val, calc_state.right_val);
+			break;
+		case '×':
+			result = multiplication(calc_state.left_val, calc_state.right_val);
+			break;
+		case '÷':
+			result = division(calc_state.left_val, calc_state.right_val);
+			break;
+	}
+	calc_state.clear();
+}
 $(function () {
 	var calc_state = new CalcState();
 	$('button').click(function(ev){
@@ -34,7 +51,11 @@ $(function () {
 		}else if(button_val === '.'){
 			calc_state.decimal = true;
 		}else{
-			calc_state.operator = button_val;
+			if(calc_state.operator !== ''){
+				calculate(calc_state);
+			}else if(button_val !== '='){
+				calc_state.operator = button_val;
+			}
 		}
 		$('#screen').html(Number(calc_state[side].toPrecision(10)));
 	});
