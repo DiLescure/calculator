@@ -1,0 +1,238 @@
+@font-face {
+    font-family: 'lcd_att_phone_timedateregular';
+    src: url('fonts/lcdattphonetimedate-webfont.eot');
+    src: url('fonts/lcdattphonetimedate-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/lcdattphonetimedate-webfont.woff2') format('woff2'),
+         url('fonts/lcdattphonetimedate-webfont.woff') format('woff'),
+         url('fonts/lcdattphonetimedate-webfont.ttf') format('truetype'),
+         url('fonts/lcdattphonetimedate-webfont.svg#lcd_att_phone_timedateregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'upheaval_tt_brkregular';
+    src: url('fonts/upheavtt-webfont.eot');
+    src: url('fonts/upheavtt-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/upheavtt-webfont.woff2') format('woff2'),
+         url('fonts/upheavtt-webfont.woff') format('woff'),
+         url('fonts/upheavtt-webfont.ttf') format('truetype'),
+         url('fonts/upheavtt-webfont.svg#upheaval_tt_brkregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+html{
+	height: 100%;
+}
+
+body{
+	background: #c8fbff; /* Old browsers */
+	background: -moz-linear-gradient(top,  #c8fbff 0%, #9becf2 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c8fbff), color-stop(100%,#9becf2)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #c8fbff 0%,#9becf2 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #c8fbff 0%,#9becf2 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #c8fbff 0%,#9becf2 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #c8fbff 0%,#9becf2 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c8fbff', endColorstr='#9becf2',GradientType=0 ); /* IE6-9 */
+	color: #a79168;
+	height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#main-wrapper{
+	display: block;
+	padding: 15px;
+	margin: 0 auto;
+	width: 98%;
+}
+
+#screen{
+	color: #8a7659;
+	border: 1px solid #a79168;
+	min-height: 180px;
+	border-radius: 10px;
+	margin: 100px auto;
+	width: 90%;
+	box-shadow: 0 8px 2px rgba(167,145,104, 0.4);
+	font-size: 20vw;
+	padding: 30px 3% 0;
+	overflow: hidden;
+	font-family: 'lcd_att_phone_timedateregular';
+	text-align: right;
+	background: #ffffff; /* Old browsers */
+	background: -moz-linear-gradient(top,  #ffffff 0%, #ffffff 49%, #f9f9f9 50%, #f9f9f9 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(49%,#ffffff), color-stop(50%,#f9f9f9), color-stop(100%,#f9f9f9)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #ffffff 0%,#ffffff 49%,#f9f9f9 50%,#f9f9f9 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #ffffff 0%,#ffffff 49%,#f9f9f9 50%,#f9f9f9 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #ffffff 0%,#ffffff 49%,#f9f9f9 50%,#f9f9f9 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #ffffff 0%,#ffffff 49%,#f9f9f9 50%,#f9f9f9 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f9f9f9',GradientType=0 ); /* IE6-9 */
+}
+
+#keypad{
+	width: 98%;
+	margin: 120px auto 0;
+}
+
+#numbers{
+	width: 60%;
+	text-align: center;
+	display: inline-block;
+}
+
+#operators{
+	width: 39%;
+	display: inline-block;
+	text-align: center;
+	background: rgba(0, 0, 0, 0.1);
+	box-shadow: 4px 4px 2px rgba(255, 255, 255, 0.4);
+	border-radius: 5px;
+}
+
+.digit,
+.period,
+.clear,
+.operator{
+	width: 30%;
+	border: 1px solid #a79168;
+	border-radius: 5px;
+	margin: 20px 1%;
+	padding: 40px;
+	font-size: 10vw;
+	text-shadow: 2px 5px rgba(255, 255, 255, 0.8);
+	box-shadow: inset 1px 1px 1px 3px rgba(255,255,255,0.3), 0 8px 2px rgba(167,145,104, 0.4);
+	font-family: 'upheaval_tt_brkregular';
+}
+
+.digit:active,
+.period:active,
+.clear:active,
+.operator:active{
+	background: #a79168;
+	color: #fff;
+}
+
+.period{
+	background: #ceffc2;
+}
+
+.digit{
+	background: #ffd3d0;
+}
+
+.digit.zero{
+	width: 263px;
+}
+
+.clear{
+	display: block;
+	width: 98%;
+	text-transform: uppercase;
+	margin: 0 auto 20px;
+	background: #ff91b9;
+	color: #fff;
+	text-shadow: 2px 5px rgba(255, 255, 255, 0.3);
+}
+
+.operator{
+	width: 47%;
+	margin: 20px 1% 40px;
+	background: #fff496;
+}
+
+.operator.tall{
+	padding: 148px 20px;
+	margin: 0 3% 0 0;
+	vertical-align: top;
+}
+
+.onecol{
+	width: 47%;
+	display: inline-block;
+}
+
+.onecol .operator{
+	display: block;
+	width: 100%;
+	margin: 0 0 40px;
+}
+
+.onecol .operator:nth-child(2){
+	margin: 0 0 11px;
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px){
+	body{
+		max-width: 1024px;
+		max-height: 768px;
+	}
+	#screen{
+		margin: 50px auto;
+	}
+	#keypad{
+		margin: 20px auto;
+	}
+}
+
+@media only screen and (min-device-width : 1025px) and (max-device-width : 2500px){
+	body{
+		max-width: 960px;
+		max-height: 750px;
+		min-width: 700px;
+		margin: 0 auto
+	}
+	#main-wrapper{
+		margin:0 auto;
+		width: 700px;
+	}
+	#screen{
+		font-size: 80px;
+		min-height: 75px;
+		margin: 12px auto;
+		width: 620px;
+	}
+	#keypad{
+		width: 694px;
+		margin: 12px auto;
+	}
+	#numbers{
+		width: 415px;
+	}
+	#operators{
+		width: 268px;
+	}
+	.digit,
+	.period,
+	.clear,
+	.operator{
+		font-size: 60px;
+		padding: 30px;
+		margin: 10px 1% 20px;
+		width: 125px;
+	}
+	.operator.tall{
+		max-height: 108px;
+		padding: 132px 0;
+		margin: 10px 5px 0 0px;
+		width: 125px;
+	}
+	.clear{
+		margin: 0 auto 20px;
+		width: 266px;
+	}
+	.onecol{
+		width: 125px;
+	}
+	.onecol .operator{
+		margin: 10px 0 30px;
+	}
+	.onecol .operator:nth-child(2){
+		margin: 0 0 10px;
+	}
+}
+

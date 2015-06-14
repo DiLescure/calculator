@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Calculator by Diana Lescure</title>
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/main.css">
+	<script>
+		function BlockMove(event) {
+		 // Tell Safari not to move the window.
+		 event.preventDefault() ;
+		}
+	</script>
+</head>
+<body ontouchmove="BlockMove(event);" >
+
+	<div id="main-wrapper">
+		<div id="screen">
+			0
+		</div>
+		<div id="keypad">
+			<div id="numbers">
+				<button class="digit">7</button>
+				<button class="digit">8</button>
+				<button class="digit">9</button>
+				<button class="digit">4</button>
+				<button class="digit">5</button>
+				<button class="digit">6</button>
+				<button class="digit">1</button>
+				<button class="digit">2</button>
+				<button class="digit">3</button>
+				<button class="digit zero">0</button>
+				<button class="period">.</button>
+			</div>
+
+			<div id="operators">
+				<button class="clear">clear</button>
+				<button class="operator">×</button>
+				<button class="operator">÷</button>
+				<div>
+					<button class="operator tall">+</button>
+					<div class="onecol">
+						<button class="operator">-</button>
+						<button class="operator">=</button>
+					<div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+
+	<script rel="script" src="js/script.js"></script>
+</body>
+</html>
