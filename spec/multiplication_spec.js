@@ -28,4 +28,10 @@ describe('Multiplication function', function(){
 
 		expect(error_message).toBe('');
 	});
+
+	it('should multiply two numbers together', function(){
+		var result = multiplication(2,3);
+
+		expect(result).toBe(6);
+	});
 });
