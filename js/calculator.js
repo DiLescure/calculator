@@ -6,4 +6,6 @@ function addition(a, b) {
 	if(typeof b === 'undefined'){
 		throw new Error('Parameter "b" not set!');
 	}
+	return a + b;
+
 }

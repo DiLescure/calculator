@@ -29,4 +29,9 @@ describe('Addition function', function(){
 		expect(error_message).toBe('');
 	});
 
+	it('should add two numbers together', function(){
+		var result = addition(2,3);
+
+		expect(result).toBe(5);
+	});
 });
