@@ -64,10 +64,14 @@ $(function () {
 			calc_state.decimal = true;
 		}else{
 			if(calc_state.operator !== ''){
-				calculate(calc_state);
-				side = 'left_val';
-				if(button_val !== '=') {
-					calc_state.operator = button_val;
+				try{
+					calculate(calc_state);
+					side = 'left_val';
+					if(button_val !== '=') {
+						calc_state.operator = button_val;
+					}
+				}catch(err){
+					alert(err.message);
 				}
 			}else if(button_val !== '='){
 				calc_state.operator = button_val;
