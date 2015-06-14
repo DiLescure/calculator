@@ -34,5 +34,8 @@ function division(a, b) {
 	if(typeof b === 'undefined'){
 		throw new Error('Parameter "b" not set!');
 	}
+	if(b === 0){
+		throw new Error('Not even God can divide by 0!');
+	}
 
 }

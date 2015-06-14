@@ -18,5 +18,24 @@ describe('Division function', function(){
 
 		expect(error_message).toBe('Parameter "b" not set!');
 
+
+		error_message = '';
+		try{
+			division(1, 1);
+		}catch(e){
+			error_message = e.message;
+		}
+
+		expect(error_message).toBe('');
+	});
+	it('should throw an error when dividing by 0', function(){
+		var error_message = '';
+		try{
+			division(1, 0);
+		}catch(e){
+			error_message = e.message;
+		}
+
+		expect(error_message).toBe('Not even God can divide by 0!');
 	});
 });
