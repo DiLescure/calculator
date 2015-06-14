@@ -40,3 +40,9 @@ function division(a, b) {
 	return a / b;
 
 }
+function multiplication(a, b) {
+
+	if(typeof a === 'undefined'){
+		throw new Error('Parameter "a" not set!');
+	}
+}
