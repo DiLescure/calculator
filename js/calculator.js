@@ -9,3 +9,9 @@ function addition(a, b) {
 	return a + b;
 
 }
+function subtraction(a, b) {
+
+	if(typeof a === 'undefined'){
+		throw new Error('Parameter "a" not set!');
+	}
+}
