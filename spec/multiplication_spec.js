@@ -8,6 +8,7 @@ describe('Multiplication function', function(){
 		}
 
 		expect(error_message).toBe('Parameter "a" not set!');
+
 		error_message = '';
 		try{
 			multiplication(1);
@@ -16,5 +17,15 @@ describe('Multiplication function', function(){
 		}
 
 		expect(error_message).toBe('Parameter "b" not set!');
+
+
+		error_message = '';
+		try{
+			multiplication(1, 1);
+		}catch(e){
+			error_message = e.message;
+		}
+
+		expect(error_message).toBe('');
 	});
 });
